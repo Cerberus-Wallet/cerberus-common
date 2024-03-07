@@ -505,7 +505,7 @@ def support_info_single(support_data: SupportData, coin: Coin) -> SupportInfoIte
 
 
 def support_info(coins: Iterable[Coin] | CoinsInfo | dict[str, Coin]) -> SupportInfo:
-    """Generate Trezor support information.
+    """Generate Cerberus support information.
 
     Takes a collection of coins and generates a support-info entry for each.
     The support-info is a dict with keys based on `support.json` keys.
@@ -531,7 +531,7 @@ def support_info(coins: Iterable[Coin] | CoinsInfo | dict[str, Coin]) -> Support
 
 # ====== wallet info ======
 
-WALLET_SUITE = {"Trezor Suite": "https://suite.trezor.io"}
+WALLET_SUITE = {"Cerberus Suite": "https://suite.trezor.io"}
 WALLET_NEM = {"Nano Wallet": "https://nemplatform.com/wallets/#desktop"}
 
 
@@ -579,7 +579,7 @@ def wallet_info_single(
 
     # Add wallets from `wallets.json`
     # This must come last as it offers the ability to override existing wallets
-    # (for example with `"Trezor Suite": null` we delete the "Trezor Suite" from the coin)
+    # (for example with `"Cerberus Suite": null` we delete the "Cerberus Suite" from the coin)
     wallets.update(wallet_data.get(key, {}))
 
     # Removing potentially disabled wallets from the last step
@@ -589,7 +589,7 @@ def wallet_info_single(
 
 
 def wallet_info(coins: Iterable[Coin] | CoinsInfo | dict[str, Coin]) -> WalletInfo:
-    """Generate Trezor wallet information.
+    """Generate Cerberus wallet information.
 
     Takes a collection of coins and generates a WalletItems entry for each.
     The WalletItems is a dict with keys being the names of the wallets and
