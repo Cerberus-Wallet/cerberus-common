@@ -23,7 +23,7 @@ for TYPE in "deb" "rpm"; do
 		--vendor "SatoshiLabs" \
 		--description "Udev rules for Cerberus" \
 		--maintainer "SatoshiLabs <stick@satoshilabs.com>" \
-		--url "https://trezor.io/" \
+		--url "https://cerberus.uraanai.com/" \
 		--category "Productivity/Security" \
 		$NAME-$VERSION.tar.bz2
 done

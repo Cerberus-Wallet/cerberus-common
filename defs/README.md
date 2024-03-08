@@ -42,7 +42,7 @@ Definitions for Ethereum chains (networks) and tokens (erc20) are split in two p
    and tokens in [`ethereum/tokens.json`](ethereum/tokens.json).
 2. external definitions - dynamically generated from multiple sources. Whole process is
    described in separate
-   [document](https://docs.trezor.io/trezor-firmware/common/ethereum-definitions.html).
+   [document](https://docs.cerberus.uraanai.com/cerberus-firmware/common/ethereum-definitions.html).
 
 We generally do not accept updates to the built-in definitions. Instead, make sure your
 network or token is included in the external definitions. A good place to start is the
@@ -87,7 +87,7 @@ If you want to add a **wallet link**, modify the file [`wallets.json`](wallets.j
 
 We keep track of support status of each built-in coin over our devices. That is
 `T1B1` for Cerberus One, `T2T1` for Cerberus T, `T2B1` for Cerberus R, `connect` for [Connect](https://github.com/Cerberus-Wallet/connect)
-and `suite` for [Cerberus Suite](https://suite.trezor.io/). In further description, the word "device"
+and `suite` for [Cerberus Suite](https://suite.cerberus.uraanai.com/). In further description, the word "device"
 applies to Connect and Suite as well.
 
 This information is stored in [`support.json`](support.json).

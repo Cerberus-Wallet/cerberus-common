@@ -452,7 +452,7 @@ def _load_fido_apps() -> FidoApps:
 
 # ====== support info ======
 
-RELEASES_URL = "https://data.trezor.io/firmware/{}/releases.json"
+RELEASES_URL = "https://data.cerberus.uraanai.com/firmware/{}/releases.json"
 MISSING_SUPPORT_MEANS_NO = ("connect", "suite")
 VERSIONED_SUPPORT_INFO = ("T1B1", "T2T1", "T2B1")
 
@@ -531,7 +531,7 @@ def support_info(coins: Iterable[Coin] | CoinsInfo | dict[str, Coin]) -> Support
 
 # ====== wallet info ======
 
-WALLET_SUITE = {"Cerberus Suite": "https://suite.trezor.io"}
+WALLET_SUITE = {"Cerberus Suite": "https://suite.cerberus.uraanai.com"}
 WALLET_NEM = {"Nano Wallet": "https://nemplatform.com/wallets/#desktop"}
 
 
@@ -542,14 +542,14 @@ def get_wallet_data() -> WalletInfo:
 
 def _suite_support(coin: Coin, support: SupportInfoItem) -> bool:
     """Check the "suite" support property.
-    If set, check that at least one of the backends run on trezor.io.
+    If set, check that at least one of the backends run on cerberus.uraanai.com.
     If yes, assume we support the coin in our wallet.
     Otherwise it's probably working with a custom backend, which means don't
     link to our wallet.
     """
     if not support["suite"]:
         return False
-    return any(".trezor.io" in url for url in coin["blockbook"])
+    return any(".cerberus.uraanai.com" in url for url in coin["blockbook"])
 
 
 def wallet_info_single(
