@@ -41492,11 +41492,11 @@
         },
         "eth:tETH:5": {
             "links": {
-                "Homepage": "https://goerli.net/#about"
+                "Homepage": "https://vanguard.vanarchain.com/"
             },
             "marketcap_usd": 0,
-            "name": "Goerli",
-            "shortcut": "tETH",
+            "name": "Vanar Vanguard",
+            "shortcut": "VANRY",
             "t1_enabled": "yes",
             "t2_enabled": "yes",
             "type": "coin",
